@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feliz Aniversário!</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #ffe6f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff78c1;
+      padding: 20px;
+      color: #ffffff;
+      font-size: 24px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .animated-word {
+      display: inline-block;
+      position: relative;
+    }
+    .animated-word::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: floating 2s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(0, -10px); }
+      100% { transform: translate(0, 0); }
+    }
+    .button {
+      background-color: #ff78c1;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .button:hover {
+      background-color: #ff5ca8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adryellen, Feliz Aniversário!</h1>
+  </header>
+  <div>
+    <p>Querida Adryellen,</p>
+    <p>Você é uma princesa maravilhosa e especial. Desejo a você os dias mais mágicos e felizes. Que cada momento seja cheio de amor, alegria e sonhos realizados.</p>
+    <p>Viva sua vida com coragem, bondade e sabedoria. Nunca deixe de perseguir seus sonhos e lembre-se de que o amor é sempre a resposta. Aproveite cada instante e nunca se esqueça de que você é incrível.</p>
+    <p>Que seu aniversário seja um dia repleto de sorrisos, abraços e momentos inesquecíveis.</p>
+    <p><span class="animated-word">Feliz</span> <span class="animated-word">Aniversário</span>!</p>
+    <button class="button" onclick="showMessage()">Clique aqui para uma mensagem especial</button>
+    <p id="message" style="display: none;">Aproveite a vida, sempre viva suas escolhas. Nunca seja cruel, nunca seja covarde. A violência sempre é burrice, o amor sempre é sábio. E nunca, nunca coma abacates. Feliz aniversário!</p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
